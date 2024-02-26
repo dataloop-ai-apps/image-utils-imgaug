@@ -1,0 +1,395 @@
+{
+  "displayName": "[Image Utils] - ImgAug",
+  "name": "image-utils-img-aug",
+  "scope": "public",
+  "version": "0.0.1",
+  "attributes": {
+    "Provider": "Other",
+    "Category": "Pipeline",
+    "Pipeline Type": "Node",
+    "Node Type": "Image Utils"
+  },
+  "codebase": {
+    "type": "git",
+    "gitUrl": "https://github.com/dataloop-ai-apps/image-utils-imgaug.git",
+    "gitTag": "0.0.1"
+  },
+  "components": {
+    "pipelineNodes": [
+      {
+        "invoke": {
+          "type": "function",
+          "namespace": "image-utils-img-aug.image_utils_img_aug.flip_image"
+        },
+        "categories": ["image-utils"],
+        "name": "Flip Image",
+        "displayName": "Flip Image",
+        "description": "Flip image horizontally or vertically",
+        "scope": "project",
+        "configuration": {
+          "fields": [
+            {
+              "name": "flip_type",
+              "title": "Flip Type",
+              "props": {
+                "type": "string",
+                "required": true,
+                "options": [
+                  {
+                    "label": "Horizontal",
+                    "value": "horizontal"
+                  },
+                  {
+                    "label": "Vertical",
+                    "value": "vertical"
+                  }
+                ],
+                "default": "horizontal"
+              },
+              "rules": [
+                {
+                  "type": "required",
+                  "effect": "error"
+                }
+              ],
+              "widget": "dl-select"
+            }
+          ]
+        }
+      },
+      {
+        "invoke": {
+          "type": "function",
+          "namespace": "image-utils-img-aug.image_utils_img_aug.corrupt_like_image"
+        },
+        "categories": ["image-utils"],
+        "name": "Corrupt Image",
+        "displayName": "Corrupt Image",
+        "description": "Cprrupt Image with multiple options",
+        "scope": "project",
+        "configuration": {
+          "fields": [
+            {
+              "name": "corrupt_type",
+              "title": "Corrupt Image",
+              "props": {
+                "type": "string",
+                "required": true,
+                "options": [
+                  {
+                    "label": "Gaussian Noise",
+                    "value": "gaussian_noise"
+                  },
+                  {
+                    "label": "Shot Noise",
+                    "value": "shot_noise"
+                  },
+                  {
+                    "label": "Impulse Noise",
+                    "value": "impulse_noise"
+                  },
+                  {
+                    "label": "Speckle Noise",
+                    "value": "speckle_noise"
+                  },
+                  {
+                    "label": "Defocus Blur",
+                    "value": "defocus_blur"
+                  },
+                  {
+                    "label": "Motion Blur",
+                    "value": "motion_blur"
+                  },
+                  {
+                    "label": "Zoom Blur",
+                    "value": "zoom_blur"
+                  },
+                  {
+                    "label": "Fog",
+                    "value": "fog"
+                  },
+                  {
+                    "label": "Frost",
+                    "value": "frost"
+                  },
+                  {
+                    "label": "Snow",
+                    "value": "snow"
+                  },
+                  {
+                    "label": "Spatter",
+                    "value": "spatter"
+                  },
+                  {
+                    "label": "Contrast",
+                    "value": "contrast"
+                  },
+                  {
+                    "label": "Brightness",
+                    "value": "brightness"
+                  },
+                  {
+                    "label": "Saturate",
+                    "value": "saturate"
+                  },
+                  {
+                    "label": "Jpeg Compression",
+                    "value": "jpeg_compression"
+                  },
+                  {
+                    "label": "Pixelate",
+                    "value": "pixelate"
+                  },
+                  {
+                    "label": "Elastic Transform",
+                    "value": "elastic_transform"
+                  }
+                ]
+              },
+              "rules": [
+                {
+                  "type": "required",
+                  "effect": "error"
+                }
+              ],
+              "widget": "dl-select"
+            },
+            {
+              "name": "severity",
+              "title": "Severity",
+              "props": {
+                "type": "number",
+                "default": 1,
+                "min": 1,
+                "max": 5,
+                "step": 1
+              },
+              "rules": [
+                {
+                  "type": "required",
+                  "effect": "error"
+                }
+              ],
+
+              "widget": "dl-slider"
+            }
+          ]
+        }
+      },
+      {
+        "invoke": {
+          "type": "function",
+          "namespace": "image-utils-img-aug.image_utils_img_aug.pooling"
+        },
+        "categories": ["image-utils"],
+        "name": "Pool Image",
+        "displayName": "Pool Image",
+        "description": "Apply pooling to image",
+        "scope": "project",
+        "configuration": {
+          "fields": [
+            {
+              "name": "pooling_type",
+              "title": "Pooling Type",
+              "props": {
+                "type": "string",
+                "required": true,
+                "options": [
+                  {
+                    "label": "Max Pooling",
+                    "value": "max"
+                  },
+                  {
+                    "label": "Min Pooling",
+                    "value": "min"
+                  },
+                  {
+                    "label": "Average Pooling",
+                    "value": "average"
+                  },
+                  {
+                    "label": "Median Pooling",
+                    "value": "median"
+                  }
+                ]
+              },
+              "rules": [
+                {
+                  "type": "required",
+                  "effect": "error"
+                }
+              ],
+              "widget": "dl-select"
+            },
+            {
+              "name": "h_value",
+              "title": "Kernel Size Height",
+              "props": {
+                "type": "number",
+                "default": 2,
+                "min": 2,
+                "max": 10,
+                "step": 1
+              },
+              "rules": [
+                {
+                  "type": "required",
+                  "effect": "error"
+                }
+              ],
+
+              "widget": "dl-slider"
+            },
+            {
+              "name": "w_value",
+              "title": "Kernel Size Width",
+              "props": {
+                "type": "number",
+                "default": 2,
+                "min": 2,
+                "max": 10,
+                "step": 1
+              },
+              "rules": [
+                {
+                  "type": "required",
+                  "effect": "error"
+                }
+              ],
+
+              "widget": "dl-slider"
+            }
+          ]
+        }
+      },
+      {
+        "invoke": {
+          "type": "function",
+          "namespace": "image-utils-img-aug.image_utils_img_aug.change_temperature"
+        },
+        "categories": ["image-utils"],
+        "scope": "project",
+        "name": "Change Temperature",
+        "displayName": "Change Temperature",
+        "description": "Change image temperature",
+        "configuration": {
+          "fields": [
+            {
+              "name": "temperature",
+              "title": "Temperature",
+              "props": {
+                "type": "number",
+                "default": 1000,
+                "min": 1000,
+                "max": 40000,
+                "step": 1
+              },
+
+              "widget": "dl-slider"
+            }
+          ]
+        }
+      }
+    ],
+    "modules": [
+      {
+        "name": "image_utils_img_aug",
+        "entryPoint": "imgaug.py",
+        "className": "ServiceRunner",
+        "initInputs": [],
+        "functions": [
+          {
+            "name": "flip_image",
+            "input": [
+              {
+                "type": "Item",
+                "name": "item"
+              }
+            ],
+            "output": [
+              {
+                "type": "Item",
+                "name": "item"
+              }
+            ],
+            "displayIcon": "item-outline"
+          },
+          {
+            "name": "change_temperature",
+            "input": [
+              {
+                "type": "Item",
+                "name": "item"
+              }
+            ],
+            "output": [
+              {
+                "type": "Item",
+                "name": "item"
+              }
+            ],
+            "displayIcon": "item-outline"
+          },
+          {
+            "name": "corrupt_like_image",
+            "input": [
+              {
+                "type": "Item",
+                "name": "item"
+              }
+            ],
+            "output": [
+              {
+                "type": "Item",
+                "name": "item"
+              }
+            ],
+            "displayIcon": "item-outline"
+          },
+          {
+            "name": "pooling",
+            "input": [
+              {
+                "type": "Item",
+                "name": "item"
+              }
+            ],
+            "output": [
+              {
+                "type": "Item",
+                "name": "item"
+              }
+            ],
+            "displayIcon": "window"
+          }
+        ]
+      }
+    ],
+    "services": [
+      {
+        "name": "image-utils-img-aug",
+        "moduleName": "image_utils_img_aug",
+        "runtime": {
+          "podType": "regular-xs",
+          "runnerImage": "dataloopai/dtlpy-agent:cpu.py3.8.opencv4.7",
+          "numReplicas": 1,
+          "concurrency": 10,
+          "singleAgent": false,
+          "autoscaler": {
+            "type": "rabbitmq",
+            "minReplicas": 1,
+            "maxReplicas": 2,
+            "queueLength": 10
+          },
+          "preemptible": false
+        },
+        "executionTimeout": 172800,
+        "drainTime": 600,
+        "onReset": "failed",
+        "runExecutionAsProcess": false,
+        "maxAttempts": 3,
+        "operation": "none"
+      }
+    ]
+  }
+}
