@@ -1,5 +1,5 @@
 {
-  "displayName": "[Image Utils] - ImgAug",
+  "displayName": "Image Augmentation",
   "name": "image-utils-img-aug",
   "scope": "public",
   "version": "0.0.2",
@@ -8,7 +8,8 @@
     "Provider": "Other",
     "Category": "Pipeline",
     "Pipeline Type": "Node",
-    "Node Type": "Image Utils"
+    "Node Type": "Image Utils",
+    "Libraries": ["ImgAug"]
   },
   "codebase": {
     "type": "git",
