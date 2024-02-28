@@ -27,7 +27,7 @@
         "name": "Flip Image",
         "displayName": "Flip Image",
         "description": "Flip image horizontally or vertically",
-        "scope": "project",
+        "scope": "node",
         "configuration": {
           "fields": [
             {
@@ -68,7 +68,7 @@
         "name": "Corrupt Image",
         "displayName": "Corrupt Image",
         "description": "Cprrupt Image with multiple options",
-        "scope": "project",
+        "scope": "node",
         "configuration": {
           "fields": [
             {
@@ -187,7 +187,7 @@
         "name": "Pool Image",
         "displayName": "Pool Image",
         "description": "Apply pooling to image",
-        "scope": "project",
+        "scope": "node",
         "configuration": {
           "fields": [
             {
@@ -270,7 +270,7 @@
           "namespace": "image-utils-img-aug.image_utils_img_aug.change_temperature"
         },
         "categories": ["image-utils"],
-        "scope": "project",
+        "scope": "node",
         "name": "Change Temperature",
         "displayName": "Change Temperature",
         "description": "Change image temperature",
