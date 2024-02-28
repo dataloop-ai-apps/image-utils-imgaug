@@ -3,6 +3,7 @@
   "name": "image-utils-img-aug",
   "scope": "public",
   "version": "0.0.2",
+  "description": "App to apply different image augmentation techniques using imgaug library",
   "attributes": {
     "Provider": "Other",
     "Category": "Pipeline",
