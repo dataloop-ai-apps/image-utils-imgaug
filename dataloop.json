@@ -6,10 +6,13 @@
   "description": "App to apply different image augmentation techniques using imgaug library",
   "attributes": {
     "Provider": "Other",
-    "Category": "Pipeline",
-    "Pipeline Type": "Node",
-    "Node Type": "Image Utils",
-    "Libraries": ["ImgAug"]
+    "Category": "Application",
+    "Libraries": [
+      "ImgAug"
+    ],
+    "Application Type": [
+      "Pipeline Node"
+    ]
   },
   "codebase": {
     "type": "git",
@@ -23,7 +26,9 @@
           "type": "function",
           "namespace": "image-utils-img-aug.image_utils_img_aug.flip_image"
         },
-        "categories": ["image-utils"],
+        "categories": [
+          "image-utils"
+        ],
         "name": "Flip Image",
         "displayName": "Flip Image",
         "description": "Flip image horizontally or vertically",
@@ -64,7 +69,9 @@
           "type": "function",
           "namespace": "image-utils-img-aug.image_utils_img_aug.corrupt_like_image"
         },
-        "categories": ["image-utils"],
+        "categories": [
+          "image-utils"
+        ],
         "name": "Corrupt Image",
         "displayName": "Corrupt Image",
         "description": "Cprrupt Image with multiple options",
@@ -172,7 +179,6 @@
                   "effect": "error"
                 }
               ],
-
               "widget": "dl-slider"
             }
           ]
@@ -183,7 +189,9 @@
           "type": "function",
           "namespace": "image-utils-img-aug.image_utils_img_aug.pooling"
         },
-        "categories": ["image-utils"],
+        "categories": [
+          "image-utils"
+        ],
         "name": "Pool Image",
         "displayName": "Pool Image",
         "description": "Apply pooling to image",
@@ -239,7 +247,6 @@
                   "effect": "error"
                 }
               ],
-
               "widget": "dl-slider"
             },
             {
@@ -258,7 +265,6 @@
                   "effect": "error"
                 }
               ],
-
               "widget": "dl-slider"
             }
           ]
@@ -269,7 +275,9 @@
           "type": "function",
           "namespace": "image-utils-img-aug.image_utils_img_aug.change_temperature"
         },
-        "categories": ["image-utils"],
+        "categories": [
+          "image-utils"
+        ],
         "scope": "node",
         "name": "Change Temperature",
         "displayName": "Change Temperature",
@@ -286,7 +294,6 @@
                 "max": 40000,
                 "step": 1
               },
-
               "widget": "dl-slider"
             }
           ]
