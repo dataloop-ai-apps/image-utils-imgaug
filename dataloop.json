@@ -2,7 +2,7 @@
   "displayName": "Image Augmentation",
   "name": "image-utils-img-aug",
   "scope": "public",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "App to apply different image augmentation techniques using imgaug library",
   "attributes": {
     "Provider": "Other",
@@ -19,7 +19,7 @@
   "codebase": {
     "type": "git",
     "gitUrl": "https://github.com/dataloop-ai-apps/image-utils-imgaug.git",
-    "gitTag": "0.0.4"
+    "gitTag": "0.0.5"
   },
   "components": {
     "pipelineNodes": [
