@@ -8,6 +8,8 @@
     "Provider": "Other",
 
     "Category": "Application",
+    "Media Type": ["Image"],
+    "Deployed By": "Dataloop",
     "Libraries": [
       "ImgAug"
     ],
