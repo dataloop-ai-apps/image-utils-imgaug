@@ -6,12 +6,14 @@
   "description": "App to apply different image augmentation techniques using imgaug library",
   "attributes": {
     "Provider": "Other",
+
     "Category": "Application",
     "Libraries": [
       "ImgAug"
     ],
     "Application Type": [
       "Pipeline Node"
+
     ]
   },
   "codebase": {
@@ -321,7 +323,7 @@
                 "name": "item"
               }
             ],
-            "displayIcon": "item-outline"
+            "displayIcon": "icon-dl-flip-image"
           },
           {
             "name": "change_temperature",
@@ -337,7 +339,7 @@
                 "name": "item"
               }
             ],
-            "displayIcon": "item-outline"
+            "displayIcon": "icon-dl-temperature"
           },
           {
             "name": "corrupt_like_image",
@@ -353,7 +355,7 @@
                 "name": "item"
               }
             ],
-            "displayIcon": "item-outline"
+            "displayIcon": "icon-dl-corrupt"
           },
           {
             "name": "pooling",
@@ -369,7 +371,7 @@
                 "name": "item"
               }
             ],
-            "displayIcon": "window"
+            "displayIcon": "icon-dl-blur"
           }
         ]
       }
