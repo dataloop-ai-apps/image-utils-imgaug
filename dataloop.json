@@ -6,15 +6,12 @@
   "description": "App to apply different image augmentation techniques using imgaug library",
   "attributes": {
     "Provider": "Other",
-
     "Category": "Application",
-    "Media Type": ["Image"],
-    "Libraries": [
-      "ImgAug"
+    "Media Type": [
+      "Image"
     ],
     "Application Type": [
       "Pipeline Node"
-
     ]
   },
   "codebase": {
