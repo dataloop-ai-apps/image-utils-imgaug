@@ -12,7 +12,8 @@
     ],
     "Application Type": [
       "Pipeline Node"
-    ]
+    ],
+    "License": "MIT"
   },
   "codebase": {
     "type": "git",
